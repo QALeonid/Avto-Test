@@ -2,8 +2,8 @@ describe('Проверка авторизации', function () {
 
     it('Верный логин и верный пароль', function () {
          cy.visit('https://pokemonbattle.ru/login'); //зашли на сайт
-         cy.get(':nth-child(1) > .auth__input').type('TheHonzikGames@yandex.ru'); // нашли логин
-         cy.get('#password').type('Vbnm56789'); // ввести пароль
+         cy.get(':nth-child(1) > .auth__input').type('NAME'); // нашли логин
+         cy.get('#password').type('PASS'); // ввести пароль
          cy.get('.auth__button').click(); // нажал войти
 
          cy.wait(2000)
